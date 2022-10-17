@@ -3,13 +3,19 @@
 *{
     margin: 0;
     padding: 0;
-    box-six=zing: border-box;
+    box-sizing: border-box;
 }
 body{
-    background-color: 070F0F;
+    background-color: #060E0E;
+    color: #F1FAEE;
     /* font-family: 'Inter', sans-serif; */
     font-family: 'Roboto', sans-serif;
 }
+nav{
+    align-item: center;
+    
+}
+
 .honeycomb
 {
   display: -webkit-box;
