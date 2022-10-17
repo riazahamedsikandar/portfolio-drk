@@ -23,7 +23,7 @@ body{
 }
 
 .navbar a:hover {
-  background-color: #007000000;
+  background-color: #007000;
 }
 
 .navbar a.active {
@@ -144,7 +144,7 @@ aboutme {
 }
 .honeycomb-cell:hover::before
 {
-  background: #fc5130;
+  background: #fb8500;
 }
 .honeycomb-cell:hover::after
 {
