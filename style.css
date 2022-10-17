@@ -10,12 +10,38 @@ body{
     color: #F1FAEE;
     /* font-family: 'Inter', sans-serif; */
     font-family: 'Roboto', sans-serif;
+    #fb8500
 }
-nav{
-    align-item: center;
-    
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+  text-align: center;
 }
 
+.navbar a:hover {
+  background-color: #007000000;
+}
+
+.navbar a.active {
+  background-color: #fb8500;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+aboutme {
+  text-align: center;
+
+}
 .honeycomb
 {
   display: -webkit-box;
