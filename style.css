@@ -18,7 +18,7 @@ body{
   color: white;
   text-decoration: none;
   font-size: 17px;
-  width: 25%;
+  width: 20%;
   text-align: center;
 }
 
@@ -37,6 +37,10 @@ body{
     width: 100%;
     text-align: left;
   }
+}
+home{
+  text-align: center;
+  
 }
 aboutme {
   text-align: center;
@@ -161,4 +165,7 @@ aboutme {
   text-align: center;
   font-size: 2.5rem;
   margin-top: 2rem;
+}
+::first-line .projects{
+  color: #fb8500;
 }
