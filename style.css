@@ -38,9 +38,13 @@ body{
     text-align: left;
   }
 }
-home{
+canvas {
+  position: fixed;
+}
+.home{
   text-align: center;
-  
+  height: 80vh;
+  padding-top: 10rem;
 }
 aboutme {
   text-align: center;
