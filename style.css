@@ -46,9 +46,8 @@ canvas {
   height: 80vh;
   padding-top: 10rem;
 }
-aboutme {
-  text-align: center;
-
+.home p{
+  float: right;
 }
 .honeycomb
 {
@@ -170,6 +169,8 @@ aboutme {
   font-size: 2.5rem;
   margin-top: 2rem;
 }
-::first-line .projects{
+.home p::first-line{
   color: #fb8500;
+  font-size: 10rem;
+  float: left;
 }

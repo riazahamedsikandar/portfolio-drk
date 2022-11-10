@@ -1,30 +1,56 @@
-var ctx = cnv.getContext("2d");
-var W = window.innerWidth;
-var H = window.innerHeight;
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
-//Set Canvas and Background Color;
-cnv.width = W;
-cnv.height = H;
-ctx.fillStyle = "#112";
-ctx.fillRect(0, 0, W, H);
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
 
-//Glow effect;
-ctx.shadowBlur = 10;
-ctx.shadowColor = "white";
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
 
-function animate() {
-  //Random position and size of stars;
-  let x = W * Math.random();
-  let y = H * Math.random();
-  let r = 2.5 * Math.random();
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-  //Draw the stars;
-  ctx.beginPath();
-  ctx.fillStyle = "white";
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.fill();
+        var that = this;
+        var delta = 200 - Math.random() * 100;
 
-  //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
-  setTimeout(animate, 100);
-}
-animate();
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
