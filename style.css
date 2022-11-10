@@ -45,6 +45,11 @@ canvas {
   text-align: center;
   height: 80vh;
   padding-top: 10rem;
+  color: yellow;
+}
+name{
+  font-size: 5rem;
+
 }
 .home p{
   float: right;
