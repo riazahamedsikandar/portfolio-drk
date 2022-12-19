@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFLIO</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a class="active" href="#">Home</a>
+            <a href="#">Aboutme</a>
+            <a href="#">Skills</a>
+            <a href="#">Project</a>
+            <a href="#">Contactme</a>
+</div>
+    </header>
+    <main>
+        <div class="home">
+            <name>Hi i'm riaz</name>
+            <h1>
+                <a href="" class="typewrite" data-period="2000" data-type='[ "I love coding...", "Creative Front-End Developer...,", "I Love Design...", "I Love to Develop." ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h1>
+        </div>
+        <aboutme>
+            <h2>ABOUT ME</h2>
+            <ul>
+                <li><img src="./assets/icons/love-tag.gif"/> Name: <name>Riaz ahamed.s</name></li>
+                <li><img src="./assets/icons/graduate (1).png"/>Qualificaton: <name>B.com(ca)</name></li>
+                <li><img src="./assets/icons/translate-language.png"/>Language known: <name>English,Tamil,Hindi,Urdu</name></li>
+                <li><img src="./assets/icons/job.png" />post: <name>Front end developer</name></li>
+            </ul>
+            <download>
+            <button><a href="./assets/riaz ahamed sikandar resume (2).pdf" download><img src="./assets/icons/download.png"/><h4>Download CV</h4></button></a>
+            </download>
+        </aboutme>
+        <skills>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</div></li>
+                <li>CSS</div></li>
+                <li> JavaScript</div></li>
+                <li> React Js</div></li>
+            </ul>
+    </skills>
+        <projets>
+            <div class="projects">
+    <h2>My projects</h2>
+    <ul class="honeycomb">
+    <li class="honeycomb-cell">
+        <img class="honeycomb-cell_img" src="./assets/Screenshot (9).png">
+        <div class="honeycomb-cell_title"><a href="https://flyo-riaz.netlify.app/"/> Web Design</div>
+    </li>
+    <li class="honeycomb-cell">
+        <img class="honeycomb-cell_img" src="./assets/Screenshot (10).png">
+        <div class="honeycomb-cell_title"><a href="https://chatbox-usingcss.netlify.app/" /> Graphic Design</div>
+    </li>
+    <li class="honeycomb-cell">
+        <img class="honeycomb-cell_img" src="./assets/Screenshot (11).png">
+        <div class="honeycomb-cell_title"><a href="https://clipboard-landing-page-riaz.netlify.app/"><div class="illu">Illustration</div></div>
+    </li>
+    <li class="honeycomb-cell">
+        <img class="honeycomb-cell_img" src="./assets/Screenshot (12).png">
+        <div class="honeycomb-cell_title"><a href="https://testomania-riaz.netlify.app/"> <div class="motion">Motion Graphics</div></div>
+    </li>
+    <li class="honeycomb-cell">
+        <img class="honeycomb-cell_img" src="./assets/Screenshot (13).png">
+        <div class="honeycomb-cell_title"><a href="https://single-price-grid-frontend-challenge.netlify.app/"> 3D<small>Animation</small></a></div>
+    </li>
+
+    <li class="honeycomb-cell honeycomb_Hidden">
+    </li>
+</ul>
+</div>
+        </projets>
+    </main>
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#060E0E" fill-opacity="1" d="M0,320L288,160L576,224L864,32L1152,256L1440,256L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path></svg>
+        <contactme>
+            <h2>Contact me</h2>
+            <div class="contactinfo">
+            <ul>
+                <li>riazahamedsikandar@gmail.com</li>
+                <li>+918667632957</li>
+                <li>Tirupur,India - 641604.</li>
+            </ul>
+        </div>
+            <div class="left">
+                <h3>
+                    follow me on
+                </h3>
+                <div class="media">
+                    <ul>
+                        <li><div class="git"><a href="#github"><img src="./assets/icons/github (1).png"/></div></a> </li>
+                        <li><div class="twitter"><a href="#twitter"><img src="./assets/icons/twitter.png"/></div></a> </li>
+                        <li><div class="facebook"><a href="#facebook"><img src="./assets/icons/facebook-logo-2019.png"/></div></a> </li>
+                        <li><div class="insta"><a href="#insta"><img src="./assets/icons/instagram.png"/></a></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="form">
+                    <h2>Message me</h2>
+                    <div class="name"><h3>Name</h3><input type="text"></div>
+                    <div class="email"><h3>Email</h3><input type="email"></div>
+                    <div class="message"><h3>Message</h3><input type="message"> </div>
+                </div>
+                <button>Send</button>
+            </div>
+        </contactme>
+    </footer>
+    
+    <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+
+    </script>
+    </body>
+    </html>
