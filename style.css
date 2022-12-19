@@ -41,8 +41,14 @@ body{
     text-align: left;
   }
 } */
+header{
+  display: flex;
+  justify-content: space-evenly;
+}
 .navbar {
   overflow: hidden;
+  justify-content: space-between;
+  display: flex;
   background-color: #060E0E;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -53,11 +59,12 @@ body{
 /* Links inside the navbar */
 .navbar a {
   float: left;
+  display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   display: block;
   background-color: #060E0E;
   color: #f2f2f2;
-  margin-left: 5rem;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -427,4 +434,17 @@ footer h2{
 .media li{
   margin-top: -5rem;
   margin-left: rem;
+}
+@media screen and (max-width:768px) {
+  skills h2{
+    font-size: 4rem;
+  }
+  skills li{
+    width: 10rem;
+    margin-left: 40%;
+  }
+  .honeycomb li{
+    margin: rem;
+    
+  }
 }
