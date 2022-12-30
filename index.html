@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <a class="active" href="#">Home</a>
-            <a href="#">Aboutme</a>
-            <a href="#">Skills</a>
-            <a href="#">Project</a>
-            <a href="#">Contactme</a>
-</div>
-    </header>
+     <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">Menu</span>
+      </button>
+      <h1 class="navbar-title">Portfolio</h1>
+      <nav class="navbar-menu">
+        <button type="button"><a href="#home">Home</a></button>
+        <button type="button"><a href="#aboutme">AboutMe</a></button>
+        <button type="button"><a href="#skills">Skills</a></button>
+        <button type="button"><a href="#projects">projects</a></button>
+        <button type="button"><a href="#contactme">Contact Me</a></button>
+      </nav>
+    </nav>
     <main>
-        <div class="home">
+        <div class="home" id="home">
             <name>Hi i'm riaz</name>
             <h1>
                 <a href="" class="typewrite" data-period="2000" data-type='[ "I love coding...", "Creative Front-End Developer...,", "I Love Design...", "I Love to Develop." ]'>
@@ -27,6 +33,7 @@
             </h1>
         </div>
         <aboutme>
+            <div class="aboutme" id="aboutme"></div>
             <h2>ABOUT ME</h2>
             <ul>
                 <li><img src="./assets/icons/love-tag.gif"/> Name: <name>Riaz ahamed.s</name></li>
@@ -39,6 +46,7 @@
             </download>
         </aboutme>
         <skills>
+            <div class="skills" id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>HTML</div></li>
@@ -46,9 +54,10 @@
                 <li> JavaScript</div></li>
                 <li> React Js</div></li>
             </ul>
-    </skills>
+            </div>
+        </skills>
         <projets>
-            <div class="projects">
+            <div class="projects" id="projects">
     <h2>My projects</h2>
     <ul class="honeycomb">
     <li class="honeycomb-cell">
@@ -81,6 +90,7 @@
     <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#060E0E" fill-opacity="1" d="M0,320L288,160L576,224L864,32L1152,256L1440,256L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path></svg>
         <contactme>
+            <div class="contactme" id="contactme">
             <h2>Contact me</h2>
             <div class="contactinfo">
             <ul>
@@ -111,10 +121,12 @@
                 </div>
                 <button>Send</button>
             </div>
+            </div>
         </contactme>
     </footer>
     
     <script>
+        const toggleMenuOpen = () => document.body.classList.toggle("open");
         var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
