@@ -538,6 +538,9 @@ body.open .navbar-overlay {
   font-family: 'Playfair Display', serif;
   color: #05FDD8;
 }
+:hover .material-icons{
+  color: white;
+}
 body.open .navbar-menu {
   translate: 0 0;
   visibility: visible;
