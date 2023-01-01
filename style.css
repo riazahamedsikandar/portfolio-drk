@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -41,7 +42,7 @@ body{
     text-align: left;
   }
 } */
-header{
+/* header{
   display: flex;
   justify-content: space-evenly;
 }
@@ -50,13 +51,12 @@ header{
   justify-content: space-between;
   display: flex;
   background-color: #060E0E;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
   font-size: 1.8rem;
 }
 
-/* Links inside the navbar */
 .navbar a {
   float: left;
   display: flex;
@@ -77,21 +77,17 @@ header{
   text-decoration: none;
   position: ;
 }
-
-/* Change background on mouse-over */
 .navbar a:hover {
   background: #fb8500;
   color: black;
 }
-
-/* Main content */
 .main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
+  margin-top: 30px;
 }
 
 canvas {
   position: fixed;
-}
+} */
 .home{
   text-align: center;
   height: 80vh;
@@ -312,6 +308,7 @@ skills li{
   border-radius: 40%;
   border: solid .1rem #05FDD8;
   width: 15%;
+  text-align: center;
   align-item: center;
   margin-left: 42%;
 
@@ -425,7 +422,7 @@ footer h2{
   background-color: #fb8500;
   margin-left: 30%;
   color: #f2f2f2;
-  font-size: 1rem;
+  font-size: 1rem0;
   border-color: #fb8500;
 }
 .contactinfo li{
@@ -434,6 +431,140 @@ footer h2{
 .media li{
   margin-top: -5rem;
   margin-left: rem;
+}
+button a{
+  color: #05fda1;
+  text-decoration: none;
+}
+button {
+  font-size: 1.2rem;
+  border: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background: #19191c;
+  color: #f9f9f9;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+  }
+}
+
+.navbar-overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+body.open .navbar-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-overlay {
+    display: none;
+  }
+}
+
+.navbar-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-burger {
+    display: none;
+  }
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fb8509;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  translate: -100% 0;
+  width: 270px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #000000;
+  visibility: hidden;
+  transition: translate 0.3s;
+}
+.material-icons{
+  font-family: 'Playfair Display', serif;
+  color: #05FDD8;
+}
+:hover .material-icons{
+  color: white;
+}
+body.open .navbar-menu {
+  translate: 0 0;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+  }
+}
+
+.navbar-menu > button {
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  padding: 0 8px;
+}
+
+.navbar-menu > button.active {
+  color: inherit;
 }
 @media screen and (max-width:768px) {
   skills h2{
@@ -444,7 +575,49 @@ footer h2{
     margin-left: 40%;
   }
   .honeycomb li{
-    margin: rem;
-    
+    margin: 4.5rem;
   }
+  .contactme{
+    text-align: center;
+  }
+  .contactinfo{
+    float: left;
+  }
+  .form{
+    margin-top: 1rem;
+
+  }
+  .left{
+    padding-top: 9rem;
+  }
+}
+@media screen and (max-width:425px){
+  .contactme{
+    text-align: center;
+  }
+  .contactinfo{
+
+  }
+  .form{
+    margin-top: -5rem;
+    margin-right: 10%;
+    padding-left: 5%;
+
+  }
+  .form h3{
+    margin-right: 50%;
+    margin-left: 50%;
+  }
+  .left{
+    margin-top: 15rem;
+    padding-top: -rem;
+  }
+  .media{
+    margin-right: 50%;
+  }
+  .right{
+    margin-left: 50%;
+    margin-right: 25%;
+  }
+
 }
