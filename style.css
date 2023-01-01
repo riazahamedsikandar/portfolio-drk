@@ -575,7 +575,51 @@ body.open .navbar-menu {
     margin-left: 40%;
   }
   .honeycomb li{
-    margin: rem;
-    
+    margin: 4.5rem;
   }
+  .contactme{
+    text-align: center;
+  }
+  .contactinfo{
+    float: left;
+  }
+  .form{
+    margin-top: 1rem;
+
+  }
+  .left{
+    padding-top: 9rem;
+  }
+}
+@media screen and (max-width:425px){
+  .contactme{
+    text-align: center;
+  }
+  .contactinfo{
+
+  }
+  .form{
+    margin-top: -5rem;
+    margin-right: 10%;
+    padding-left: 5%;
+
+  }
+  .form h3{
+    margin-right: 50%;
+    margin-left: 50%;
+  }
+  .left{
+    margin-top: 15rem;
+    padding-top: -rem;
+  }
+  .media{
+    margin-right: 50%;
+  }
+  .right{
+    margin-left: 50%;
+    margin-top: rem;
+    margin-right: 25%;
+
+  }
+
 }
