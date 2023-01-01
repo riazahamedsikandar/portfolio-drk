@@ -621,3 +621,51 @@ body.open .navbar-menu {
   }
 
 }
+@media screen and (max-width:600px){
+  aboutme li{
+    font-size: 1.5rem;
+  }
+  download button{
+    margin-left: 35%;
+    text-align: center;
+  }
+  skills ul{
+    margin-right: 10%;
+  }
+  contactme{
+    display: 100vh;
+  }
+  .form{
+    margin-top: -5rem;
+    margin-right: 10%;
+    padding-left: 5%;
+
+  }
+  .form h3{
+    margin-right: 50%;
+    margin-left: 50%;
+  }
+  .left{
+    margin-top: 15rem;
+    padding-top: -rem;
+    margin-bottom: rem;
+  }
+  .media{
+    margin-right: 20%;
+
+  }
+  .right{
+    margin-left: 50%;
+    margin-right: 30%;
+  }
+  .right button{
+    margin-left: 10%;
+  }
+  .form h3{
+    text-align: center;
+    margin-left: 40%;
+  }
+  .contactinfo{
+    margin-left: 25%;
+  }
+}
