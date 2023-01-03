@@ -264,8 +264,7 @@ aboutme button{
   text-align: center;
   margin-top: 1rem;
   background-color: #05FDD8;
-  margin-left: 42%;
-  border-radius: 1rem;
+  border-radius: 5rem;
   width: 10rem;
 }
 aboutme download button:hover{
@@ -291,6 +290,9 @@ download img{
   height: 2rem;
   margin-right: 7rem;
 }
+download{
+  margin-left: 6rem;
+}
 skills h2{
   font-size: 3rem;
   text-align: center;
@@ -300,6 +302,7 @@ skills h2{
 }
 skills ul{
   text-align: center;
+  margin-left: 10rem;
 }
 skills li{
   margin: 1.5rem;
@@ -359,7 +362,7 @@ skills li{
 footer{
   margin-top: 10rem;
   padding-bottom: 10rem;
-  background-image: url(./assets/cool-background.png);
+  background-color: #202020;
   font-family: 'Courier New', Courier, monospace;
 }
 footer h2{
@@ -414,19 +417,20 @@ footer h2{
   font-size: 2rem;
   color: #fb8500;
 }
+
 .right button{
   height: 2rem;
   width: 5rem;
   margin-top: .5rem;
   border-radius: .5rem;
   background-color: #fb8500;
-  margin-left: 30%;
   color: #f2f2f2;
   font-size: 1rem0;
   border-color: #fb8500;
 }
 .contactinfo li{
   padding: .5rem;
+  margin-left: -15rem;
 }
 .media li{
   margin-top: -5rem;
