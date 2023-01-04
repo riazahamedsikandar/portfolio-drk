@@ -386,9 +386,12 @@ footer h3{
 contactme{
   color: #fb8500;
 }
+contactme .left{
+  margin-top: 2rem;
+}
 .left li{
   padding: 1rem;
-  margin-top: rem;
+  margin-left: 4rem;
 }
 .right{
   margin-top: rem;
@@ -405,6 +408,9 @@ contactme{
   color: #F1FAEE;
   font-family: 'Times New Roman', Times, serif;
   color: #fb8500;
+}
+.right{
+  margin-top: -1.5rem;
 }
 .form{
   background-color: #2020;
@@ -448,6 +454,9 @@ button {
   background: transparent;
   color: inherit;
   cursor: pointer;
+}
+contactme .right{
+  margin-right: 5rem;
 }
 
 .navbar {
@@ -595,7 +604,43 @@ body.open .navbar-menu {
     padding-top: 9rem;
   }
 }
-@media screen and (max-width:425px){
+@media screen and (min-width:599px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: 100%;
+  }
+  aboutme download{
+    margin-left:0rem;
+  }
+
+  skills h2{
+    font-size: 4rem;
+  }
+  skills li{
+    width: 10rem;
+    margin-left: 4rem;
+  }
+  .honeycomb li{
+    margin: 4.5rem;
+  }
+  .contactme{
+    text-align: center;
+  }
+  .contactinfo{
+    float: left;
+  }
+  .form{
+    margin-top: 1rem;
+
+  }
+  .left{
+    padding-top: 9rem;
+  }
+}
+
+@media screen and (min-width:425px){
   .contactme{
     text-align: center;
   }
