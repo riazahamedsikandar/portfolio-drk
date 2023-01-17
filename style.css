@@ -261,11 +261,12 @@ aboutme img{
 }
 aboutme button{
   height: 2.5rem;
+  align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background-color: #05FDD8;
   border-radius: 5rem;
-  width: 10rem;
+
 }
 aboutme download button:hover{
   background-color: #05fda1;
@@ -291,7 +292,7 @@ download img{
   margin-right: 7rem;
 }
 download{
-  margin-left: 6rem;
+  padding-left: 8rem;
 }
 skills h2{
   font-size: 3rem;
@@ -302,7 +303,7 @@ skills h2{
 }
 skills ul{
   text-align: center;
-  margin-left: 10rem;
+  margin-left: 32rem;
 }
 skills li{
   margin: 1.5rem;
@@ -480,6 +481,13 @@ contactme .right{
     justify-content: space-between;
     padding: 0 0 0 16px;
   }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+  }
+
 }
 
 .navbar-overlay {
@@ -640,7 +648,7 @@ body.open .navbar-menu {
   }
 }
 
-@media screen and (min-width:425px){
+@media all and (max-width:480px){
   .contactme{
     text-align: center;
   }
